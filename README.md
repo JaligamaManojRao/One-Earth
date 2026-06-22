@@ -149,7 +149,7 @@ See **[DEPLOY.md](./DEPLOY.md)** for step-by-step instructions to publish on **V
 Quick summary:
 
 1. Push the repo to GitHub
-2. Deploy backend with Render using `backend/render.yaml`
+2. Deploy backend with Render using `render.yaml` (repo root)
 3. Deploy frontend on Vercel (root directory: `frontend`)
 4. Set `NEXT_PUBLIC_API_URL` on Vercel to your Render API URL
 5. Set `CORS_ORIGINS` on Render to your Vercel site URL

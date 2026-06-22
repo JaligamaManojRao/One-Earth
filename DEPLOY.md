@@ -20,7 +20,7 @@ This guide publishes the site so **anyone with the link** can use it.
 1. Go to [render.com](https://render.com) and sign in with GitHub.
 2. Click **New → Blueprint**.
 3. Connect your GitHub repo and select the **One Earth** repository.
-4. Render reads `backend/render.yaml` and creates:
+4. Render reads `render.yaml` at the **repo root** and creates:
    - A **Web Service** (`one-earth-api`)
    - A **PostgreSQL** database (`one-earth-db`)
 5. When prompted for **CORS_ORIGINS**, enter your Vercel URL (you can update this after Step 2):
