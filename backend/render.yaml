@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: one-earth-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.0"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: one-earth-db
+          property: connectionString
+
+databases:
+  - name: one-earth-db
+    plan: free
